@@ -1,12 +1,13 @@
 {
   "name": "eat-da-burger-jk",
   "version": "1.0.0",
-  "description": "",
+  "description": "To be filled",
   "main": "server.js",
   "scripts": {
+    "start": "server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "JK",
   "license": "ISC",
   "dependencies": {
     "escape-html": "^1.0.3",
