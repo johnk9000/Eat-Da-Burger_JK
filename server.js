@@ -34,7 +34,7 @@ connection.connect(function(err) {
 
 // ROUTE TABLES ========================================================================================================================
 app.get("/", function(req, res) {
-  connection.query("SELECT * FROM menu;", function(err, data) {
+  connection.query("SELECT * FROM menu WHERE eaten = 0;", function(err, data) {
     if (err) {
       return res.status(500).end();
     }
@@ -43,19 +43,21 @@ app.get("/", function(req, res) {
 });
 // Add a burger
 app.post("/api/burger", function(req, res) {
-  const sanitizedHtml = escapeHtml(req.body.burger);
-  connection.query("INSERT INTO menu (burger) VALUES (?)", [sanitizedHtml], function(err, result) {
+  const sanitizedHtml = escapeHTML(req.body.burger);
+  let query = "INSERT INTO menu (burger) VALUES (?)"
+  connection.query(query, [sanitizedHtml], function(err, result) {
     if (err) {
       return res.status(500).end();
     }
     // Send back the ID of the new burger
-    // res.json({ id: result.insertId });
-    // console.log({ id: result.insertId });
+    res.json({ id: result.insertId });
+    console.log({ id: result.insertId });
   });
 });
 // Eat a burger
-app.delete("/api/burger/:id", function(req, res) {
-  connection.query("DELETE FROM menu WHERE id = ?", [req.params.id], function(err, result) {
+app.post("/api/burger/:id", function(req, res) {
+  let query = "UPDATE menu SET eaten = 1 WHERE id = ?"
+  connection.query(query, [req.params.id], function(err, result) {
     if (err) {
       return res.status(500).end();
     }

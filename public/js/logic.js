@@ -1,16 +1,4 @@
-module.exports = function(body){
-    return `
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Eat da Burger JK</title>
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script href="./js/logic.js" type="text/javascript" ></script>
-    <link rel="stylesheet" href="./css/style.css" type="text/css" />
-  </head>
-  <script type="text/javascript">
-  $(function() {
+$(function() {
     $('#add-form').on("submit", e => {
         
         e.preventDefault()
@@ -39,18 +27,6 @@ module.exports = function(body){
             function() {
         console.log('eating burger...')
         location.reload();
-    })
+        })
     })
 })
-  </script>
-  <body>
-  <header>
-  <img src="https://img.icons8.com/ios/100/000000/crane.png"/>
-  <img src="https://img.icons8.com/wired/64/000000/hamburger.png"/>
-  <img src="https://img.icons8.com/ios/100/000000/sts-crane.png"/>
-  </header>
-    ${ body }
-  </body>
-  </html>
-  `
-  }
