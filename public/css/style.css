@@ -1,5 +1,5 @@
 html, body {
-    font-family: Arial;
+    font-family: 'Podkova', serif;
     color: #333;
 }
 
@@ -10,6 +10,7 @@ card {
     margin: 40px auto;
     padding: 40px 60px;
     border-radius: 10px;
+    box-shadow: 1px 1px 15px 1px black;
     color: #333;
     background-color: hsla(0, 0%, 50%, 0.35);
     backdrop-filter: blur(15px);
@@ -34,13 +35,15 @@ card > button:hover {
 }
 
 h2, h3 {
-    color: #999;
+    color: rgb(128, 108, 0);
     text-align: center;
     font-size: 48px;
     font-weight: 200;
+    font-family: 'Pacifico', cursive;
 }
 
 header {
+    font-family: 'Podkova', serif;
     align-content:center;
     justify-content:center;
 }

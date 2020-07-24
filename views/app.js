@@ -8,6 +8,7 @@ module.exports = function(body){
     <script src="https://code.jquery.com/jquery.js"></script>
     <script href="./js/logic.js" type="text/javascript" ></script>
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Podkova&display=swap" rel="stylesheet">
   </head>
   <script type="text/javascript">
   $(function() {
@@ -45,9 +46,11 @@ module.exports = function(body){
   </script>
   <body>
   <header>
-  <img src="https://img.icons8.com/ios/100/000000/crane.png"/>
+  <p>BURGER</p>
+  <img src="https://img.icons8.com/ios/100/000000/crane.png" style="margin-left: 40%;"/>
   <img src="https://img.icons8.com/wired/64/000000/hamburger.png"/>
   <img src="https://img.icons8.com/ios/100/000000/sts-crane.png"/>
+  <p>BUILDER</p>
   </header>
     ${ body }
   </body>
