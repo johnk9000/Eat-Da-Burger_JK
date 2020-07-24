@@ -1,6 +1,12 @@
 module.exports = function(menu) {
     return `
-    <h1>Burgers to be Devoured: </h1>
+    <h2>Create a Plan</h2>
+    <form id="add-burger" class="button-size">
+      <textarea type="text" name="burger"></textarea>
+      <button type="submit">Save Burger!</button>
+    </form>
+
+    <h2>Burgers to be Devoured</h2>
 
     <ul>
         ${ menu.map(burger => {
