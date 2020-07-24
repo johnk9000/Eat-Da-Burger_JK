@@ -1,4 +1,5 @@
-module.exports = function(menu) {
+module.exports = function(data) {
+        //console.log(data) //DEL
     return `
     <h2>Create a Plan</h2>
     <form id="add-burger" class="button-size">
@@ -9,7 +10,7 @@ module.exports = function(menu) {
     <h2>Burgers to be Devoured</h2>
 
     <ul>
-        ${ menu.map(burger => {
+        ${ data.burger.map(burger => {
             return `
             <li> <p> ${ burger.id } | ${ burger.burger } </p>
             <button data-id="${ burger.id }" class="devour"> Devour It! </button?

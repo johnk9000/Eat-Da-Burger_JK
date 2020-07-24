@@ -38,7 +38,7 @@ app.get("/", function(req, res) {
     if (err) {
       return res.status(500).end();
     }
-    res.send(views.app(views.burgers( { burger:data })))
+    res.send(views.app(views.burgers( { burger: data })))
   });
 });
 // Add a burger
