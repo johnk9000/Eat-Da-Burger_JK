@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Serve all the static files in the public folder
 app.use(express.static("public"));
-
+app.use(express.static("views"));
 // DB CONNECTION =======================================================================================================================
 // if (process.env.JAWSDB_URL) {
   // const connection = mysql.createConnection(process.env.JAWSDB_URL)
